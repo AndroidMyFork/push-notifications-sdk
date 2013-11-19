@@ -62,6 +62,7 @@ function onPushwooshInitialized(pushToken)
 
 	//set multi notificaiton mode
 	//pushNotification.setMultiNotificationMode();
+	//pushNotification.setEnableLED(true);
 	
 	//set single notification mode
 	//pushNotification.setSingleNotificationMode();

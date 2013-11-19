@@ -55,6 +55,8 @@
 		501A3E14172A8D3B00DE335F /* PWLocationTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A3E13172A8D3A00DE335F /* PWLocationTracker.m */; };
 		506801F31701CE0200FC7F74 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506801F21701CE0200FC7F74 /* AssetsLibrary.framework */; };
 		506F68BC162EF6CB00968D5C /* PWSendBadgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F68BB162EF6CB00968D5C /* PWSendBadgeRequest.m */; };
+		50B410CB183B8C8000EEED17 /* PWUnregisterDeviceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B410CA183B8C8000EEED17 /* PWUnregisterDeviceRequest.m */; };
+		50B410CD183B8CEC00EEED17 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B410CC183B8CEC00EEED17 /* AdSupport.framework */; };
 		50B548D516A82994008F5025 /* PWApplicationEventRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B548D416A82994008F5025 /* PWApplicationEventRequest.m */; };
 		50B7291F165D596F00525F8B /* PWAppOpenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7291D165D596F00525F8B /* PWAppOpenRequest.m */; };
 		50BC177815C43E5400337F46 /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC177715C43E5400337F46 /* PushNotification.m */; };
@@ -149,6 +151,9 @@
 		506801F21701CE0200FC7F74 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		506F68BA162EF6CB00968D5C /* PWSendBadgeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWSendBadgeRequest.h; sourceTree = "<group>"; };
 		506F68BB162EF6CB00968D5C /* PWSendBadgeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWSendBadgeRequest.m; sourceTree = "<group>"; };
+		50B410C9183B8C8000EEED17 /* PWUnregisterDeviceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWUnregisterDeviceRequest.h; sourceTree = "<group>"; };
+		50B410CA183B8C8000EEED17 /* PWUnregisterDeviceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWUnregisterDeviceRequest.m; sourceTree = "<group>"; };
+		50B410CC183B8CEC00EEED17 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		50B548D316A82994008F5025 /* PWApplicationEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWApplicationEventRequest.h; sourceTree = "<group>"; };
 		50B548D416A82994008F5025 /* PWApplicationEventRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWApplicationEventRequest.m; sourceTree = "<group>"; };
 		50B7291D165D596F00525F8B /* PWAppOpenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWAppOpenRequest.m; sourceTree = "<group>"; };
@@ -174,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B410CD183B8CEC00EEED17 /* AdSupport.framework in Frameworks */,
 				500DC654177200CB00440C36 /* ImageIO.framework in Frameworks */,
 				506801F31701CE0200FC7F74 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
@@ -281,6 +287,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50B410CC183B8CEC00EEED17 /* AdSupport.framework */,
 				500DC653177200CB00440C36 /* ImageIO.framework */,
 				506801F21701CE0200FC7F74 /* AssetsLibrary.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -312,6 +319,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				50B410C9183B8C8000EEED17 /* PWUnregisterDeviceRequest.h */,
+				50B410CA183B8C8000EEED17 /* PWUnregisterDeviceRequest.m */,
 				50BCA97F175F6D920008AB74 /* PWGetTagsRequest.h */,
 				50BCA980175F6D920008AB74 /* PWGetTagsRequest.m */,
 				501A3E12172A8D3A00DE335F /* PWLocationTracker.h */,
@@ -515,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B410CB183B8C8000EEED17 /* PWUnregisterDeviceRequest.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,

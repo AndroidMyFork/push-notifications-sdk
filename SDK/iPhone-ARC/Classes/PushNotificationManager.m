@@ -167,7 +167,7 @@ static PushNotificationManager * instance = nil;
 		pushNotifications = [[NSMutableDictionary alloc] init];
 		showPushnotificationAlert = YES;
 
-		NSObject * showAlertObj = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Pushwoosh_SHOW_ALERT"];
+		NSNumber * showAlertObj = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Pushwoosh_SHOW_ALERT"];
 		if(showAlertObj)
 		{
 			showPushnotificationAlert = [showAlertObj boolValue];
