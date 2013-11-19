@@ -15,6 +15,8 @@
 		500B664315E3DCD2002B2233 /* PWRegisterDeviceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B663B15E3DCD2002B2233 /* PWRegisterDeviceRequest.m */; };
 		500B664415E3DCD2002B2233 /* PWSetTagsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 500B663C15E3DCD2002B2233 /* PWSetTagsRequest.h */; };
 		500B664515E3DCD2002B2233 /* PWSetTagsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B663D15E3DCD2002B2233 /* PWSetTagsRequest.m */; };
+		500F6983183B879B008B14DF /* PWGetTagsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 500F6981183B879B008B14DF /* PWGetTagsRequest.h */; };
+		500F6984183B879B008B14DF /* PWGetTagsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 500F6982183B879B008B14DF /* PWGetTagsRequest.m */; };
 		501A3E0B1729806A00DE335F /* PW_SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 501A3E091729806A00DE335F /* PW_SBJsonParser.h */; };
 		501A3E0C1729806A00DE335F /* PW_SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A3E0A1729806A00DE335F /* PW_SBJsonParser.m */; };
 		506897FC175A08F20070A2E7 /* PWLocationTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 506897FA175A08F20070A2E7 /* PWLocationTracker.m */; };
@@ -54,6 +56,8 @@
 		500B663B15E3DCD2002B2233 /* PWRegisterDeviceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWRegisterDeviceRequest.m; path = Classes/PWRegisterDeviceRequest.m; sourceTree = "<group>"; };
 		500B663C15E3DCD2002B2233 /* PWSetTagsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PWSetTagsRequest.h; path = Classes/PWSetTagsRequest.h; sourceTree = "<group>"; };
 		500B663D15E3DCD2002B2233 /* PWSetTagsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWSetTagsRequest.m; path = Classes/PWSetTagsRequest.m; sourceTree = "<group>"; };
+		500F6981183B879B008B14DF /* PWGetTagsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PWGetTagsRequest.h; path = Classes/PWGetTagsRequest.h; sourceTree = "<group>"; };
+		500F6982183B879B008B14DF /* PWGetTagsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWGetTagsRequest.m; path = Classes/PWGetTagsRequest.m; sourceTree = "<group>"; };
 		501A3E091729806A00DE335F /* PW_SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PW_SBJsonParser.h; path = Classes/PW_SBJsonParser.h; sourceTree = "<group>"; };
 		501A3E0A1729806A00DE335F /* PW_SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PW_SBJsonParser.m; path = Classes/PW_SBJsonParser.m; sourceTree = "<group>"; };
 		506897FA175A08F20070A2E7 /* PWLocationTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWLocationTracker.m; path = Classes/PWLocationTracker.m; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 		A4F8238515C9257D00913778 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				500F6981183B879B008B14DF /* PWGetTagsRequest.h */,
+				500F6982183B879B008B14DF /* PWGetTagsRequest.m */,
 				50B548D916A837BC008F5025 /* PWApplicationEventRequest.m */,
 				50B548DA16A837BC008F5025 /* PWApplicationEventRequest.h */,
 				50B72906165D47B300525F8B /* PWAppOpenRequest.m */,
@@ -211,6 +217,7 @@
 				50B548DC16A837BC008F5025 /* PWApplicationEventRequest.h in Headers */,
 				506B6BD116D1AFF300B6F50F /* PW_SBJsonBase.h in Headers */,
 				506B6BD316D1AFF300B6F50F /* PW_SBJsonWriter.h in Headers */,
+				500F6983183B879B008B14DF /* PWGetTagsRequest.h in Headers */,
 				506B6BD716D1B05C00B6F50F /* PushAirExtension.h in Headers */,
 				506B6BDA16D1B12100B6F50F /* FlashRuntimeExtensions.h in Headers */,
 				501A3E0B1729806A00DE335F /* PW_SBJsonParser.h in Headers */,
@@ -280,6 +287,7 @@
 				500B664315E3DCD2002B2233 /* PWRegisterDeviceRequest.m in Sources */,
 				500B664515E3DCD2002B2233 /* PWSetTagsRequest.m in Sources */,
 				506F68A3162EF5C900968D5C /* PWSendBadgeRequest.m in Sources */,
+				500F6984183B879B008B14DF /* PWGetTagsRequest.m in Sources */,
 				50B72908165D47B300525F8B /* PWAppOpenRequest.m in Sources */,
 				50B548DB16A837BC008F5025 /* PWApplicationEventRequest.m in Sources */,
 				506B6BD216D1AFF300B6F50F /* PW_SBJsonBase.m in Sources */,
@@ -297,11 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/PushNotificationManager.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -313,7 +317,6 @@
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = PushNotification;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -321,11 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/PushNotificationManager.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -334,18 +333,13 @@
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = PushNotification;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Release;
 		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7s,
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_THUMB_SUPPORT = NO;
@@ -355,18 +349,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7s,
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -375,7 +364,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Release;
 		};
