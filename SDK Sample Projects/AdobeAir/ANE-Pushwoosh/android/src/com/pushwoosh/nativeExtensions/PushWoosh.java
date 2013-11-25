@@ -191,6 +191,18 @@ class PushWoosh
 		PushManager.clearLocalNotifications(mainActivity);
 		return 0;
     }
+
+    public int startGeoPushes()
+    {
+		PushManager.startTrackingGeoPushes(mainActivity);
+		return 0;
+    }
+
+    public int stopGeoPushes()
+    {
+		PushManager.stopTrackingGeoPushes(mainActivity);
+		return 0;
+    }
 	
     public int PushWooshScheduleLocalNotification(String message, int seconds, String userdata)
     {

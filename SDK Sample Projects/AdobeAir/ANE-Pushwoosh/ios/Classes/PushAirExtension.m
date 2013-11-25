@@ -168,11 +168,33 @@ DEFINE_ANE_FUNCTION(clearAllLocalNotifications)
 	return nil;
 }
 
+DEFINE_ANE_FUNCTION(startGeoPushes)
+{
+	NSString* mode = FreToNSString(argv[0]);
+	if(mode != nil || [mode isEqualToString:@""])
+	{
+		[[PushNotificationManager pushManager] startLocationTracking];
+	}
+	else
+	{
+		[[PushNotificationManager pushManager] startLocationTracking:mode];
+	}
+	
+	return nil;
+}
+
+DEFINE_ANE_FUNCTION(stopGeoPushes)
+{
+	[[PushNotificationManager pushManager] stopLocationTracking];
+	
+	return nil;
+}
+
 void PushwooshContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
 							   uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
     // Register the links btwn AS3 and ObjC. (dont forget to modify the nbFuntionsToLink integer if you are adding/removing functions)
-    NSInteger nbFuntionsToLink = 9;
+    NSInteger nbFuntionsToLink = 11;
     *numFunctionsToTest = nbFuntionsToLink;
     
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * nbFuntionsToLink);
@@ -212,6 +234,14 @@ void PushwooshContextInitializer(void* extData, const uint8_t* ctxType, FREConte
     func[8].name = (const uint8_t*) "unregisterPush";
     func[8].functionData = NULL;
     func[8].function = &unregisterPush;
+
+	func[9].name = (const uint8_t*) "startGeoPushes";
+    func[9].functionData = NULL;
+    func[9].function = &startGeoPushes;
+
+	func[10].name = (const uint8_t*) "stopGeoPushes";
+    func[10].functionData = NULL;
+    func[10].function = &stopGeoPushes;
 
     *functionsToSet = func;
     

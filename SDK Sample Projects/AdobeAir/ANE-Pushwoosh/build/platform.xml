@@ -17,6 +17,8 @@
 //////////////////////////////////////////////////////////////////////////////////////-->
 
 <platform xmlns="http://ns.adobe.com/air/extension/3.1">
-    <sdkVersion>4.3</sdkVersion>
-    <linkerOptions></linkerOptions>
+    <sdkVersion>7.0</sdkVersion>
+    <linkerOptions>    	<option>-ios_version_min 5.0</option>
+    	<option>-framework AdSupport</option>
+    </linkerOptions>
 </platform>

@@ -147,6 +147,16 @@ public class PushManager
 		}
 	}
 
+	static public void startTrackingGeoPushes(Context context)
+	{
+		context.startService(new Intent(context, GeoLocationService.class));
+	}
+
+	static public void stopTrackingGeoPushes(Context context)
+	{
+		context.stopService(new Intent(context, GeoLocationService.class));
+	}
+
 	public void startTrackingGeoPushes()
 	{
 		mContext.startService(new Intent(mContext, GeoLocationService.class));

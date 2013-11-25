@@ -60,6 +60,9 @@ public class GCMExtensionContext extends FREContext {
 
 		functionMap.put("scheduleLocalNotification", new ScheduleLocalNotification());
 		functionMap.put("clearLocalNotifications", new ClearLocalNotifications());
+
+		functionMap.put("startGeoPushes", new StartGeoPushes());
+		functionMap.put("stopGeoPushes", new StopGeoPushes());
 		
 		return functionMap;	
 	}

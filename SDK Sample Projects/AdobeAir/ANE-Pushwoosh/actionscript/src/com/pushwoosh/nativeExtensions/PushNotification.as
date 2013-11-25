@@ -65,6 +65,7 @@ package com.pushwoosh.nativeExtensions
 
 		public function get isPushNotificationSupported():Boolean
 		{
+			//TODO: we actually support Amazon pushes!
 			var result:Boolean = (Capabilities.manufacturer.search('iOS') > -1 || Capabilities.manufacturer.search('Android') > -1);
 			return result;
 		}
@@ -87,6 +88,31 @@ package com.pushwoosh.nativeExtensions
 			if (this.isPushNotificationSupported)
 			{
 				extCtx.call("setBadgeNumber", value);
+			}
+		}
+
+		// Starts location tracking.
+		// iOS:
+		// You also can specify the mode in the `Info.plist` file with the `Pushwoosh_BGMODE` key, in this case pass an empty string as a parameter to the function.
+		// Available modes are:
+ 		// - `PWTrackingDisabled` - no tracking in background (default)
+ 		// - `PWTrackSignificantLocationChanges` - this mode is battery-efficient and uses network triangulation in background and GPS in foreground
+ 		// - `PWTrackAccurateLocationChanges` - uses GPS in background and drains the battery. You have to specify "location" background mode in Info.plist as per iOS requirements
+ 		//
+ 		// Android: the parameter is ignored and internal algorithm for saving battery is used
+ 		public function startGeoPushes(name:String):void
+		{
+			if (this.isPushNotificationSupported)
+			{
+				extCtx.call("startGeoPushes", name);
+			}
+		}
+
+		public function stopGeoPushes():void
+		{
+			if (this.isPushNotificationSupported)
+			{
+				extCtx.call("stopGeoPushes");
 			}
 		}
 

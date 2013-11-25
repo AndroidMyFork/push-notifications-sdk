@@ -41,6 +41,8 @@
                 <string>UIStatusBarStyleBlackOpaque</string>
                 <key>UIRequiresPersistentWiFi</key>
                 <string>YES</string>
+                <key>Pushwoosh_APPID</key>
+            	<string>4F0C807E51EC77.93591449</string>
             ]]>
         </InfoAdditions> 
 		 <Entitlements>
