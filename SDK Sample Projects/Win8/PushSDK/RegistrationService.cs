@@ -48,12 +48,12 @@ namespace PushSDK
 
             byte[] requestBytes = System.Text.Encoding.UTF8.GetBytes(request);
 
-            // Write the channel URI to the request stream.
-            Stream requestStream = await webRequest.GetRequestStreamAsync();
-            requestStream.Write(requestBytes, 0, requestBytes.Length);
+			try
+			{
+				// Write the channel URI to the request stream.
+				Stream requestStream = await webRequest.GetRequestStreamAsync();
+				requestStream.Write(requestBytes, 0, requestBytes.Length);
 
-            try
-            {
                 // Get the response from the server.
                 WebResponse response = await webRequest.GetResponseAsync();
                 StreamReader requestReader = new StreamReader(response.GetResponseStream());
@@ -86,7 +86,10 @@ namespace PushSDK
             {
                 var errorMessage = ex.Message;
                 Debug.WriteLine("Error: " + errorMessage);
-                errorEvent(this, new CustomEventArgs<string> { Result = errorMessage });
+				if(errorEvent != null)
+				{
+					errorEvent(this, new CustomEventArgs<string> { Result = errorMessage });
+				}
             }
         }
     }
