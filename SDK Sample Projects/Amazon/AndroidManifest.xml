@@ -60,7 +60,7 @@
         If you specify android:required="false", your app must degrade gracefully when ADM is unavailable. -->
         <amazon:enable-feature
             android:name="com.amazon.device.messaging"
-            android:required="true" />
+            android:required="false" />
 
         <receiver
             android:name="com.arellomobile.android.push.MessageAlertReceiver"
