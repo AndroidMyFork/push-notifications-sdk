@@ -16,7 +16,7 @@ import com.amazon.device.messaging.ADMMessageReceiver;
 
 public class PushAmazonIntentService extends ADMMessageHandlerBase
 {
-	private static final String TAG = "GCMIntentService";
+	private static final String TAG = "AmazonIntentService";
 
 	/**
 	 * The MessageAlertReceiver class listens for messages from ADM and forwards them to the
