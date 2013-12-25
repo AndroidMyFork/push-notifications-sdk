@@ -7,3 +7,6 @@
 [submodule "SDK/BlackBerry"]
 	path = SDK/BlackBerry
 	url = https://github.com/shaders/pushwoosh-blackberry-sdk.git
+[submodule "SDK/Mac"]
+	path = SDK/Mac
+	url = https://github.com/shaders/pushwoosh-mac-sdk.git
