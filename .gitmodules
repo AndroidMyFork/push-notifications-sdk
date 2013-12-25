@@ -13,3 +13,6 @@
 [submodule "SDK/WP"]
 	path = SDK/WP
 	url = https://github.com/shaders/pushwoosh-windows-phone-sdk.git
+[submodule "SDK/Win8"]
+	path = SDK/Win8
+	url = https://github.com/shaders/pushwoosh-windows-8-sdk.git
