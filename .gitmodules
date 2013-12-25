@@ -10,3 +10,6 @@
 [submodule "SDK/Mac"]
 	path = SDK/Mac
 	url = https://github.com/shaders/pushwoosh-mac-sdk.git
+[submodule "SDK/WP"]
+	path = SDK/WP
+	url = https://github.com/shaders/pushwoosh-windows-phone-sdk.git
