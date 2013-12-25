@@ -1,0 +1,3 @@
+[submodule "SDK/iPhone"]
+	path = SDK/iPhone
+	url = https://github.com/shaders/pushwoosh-ios-sdk.git
