@@ -16,3 +16,6 @@
 [submodule "SDK/Win8"]
 	path = SDK/Win8
 	url = https://github.com/shaders/pushwoosh-windows-8-sdk.git
+[submodule "SDK/iPhone-ARC"]
+	path = SDK/iPhone-ARC
+	url = https://github.com/shaders/pushwoosh-ios-arc-sdk.git
