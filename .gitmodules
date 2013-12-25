@@ -19,3 +19,6 @@
 [submodule "SDK/iPhone-ARC"]
 	path = SDK/iPhone-ARC
 	url = https://github.com/shaders/pushwoosh-ios-arc-sdk.git
+[submodule "SDK Sample Projects"]
+	path = SDK Sample Projects
+	url = https://github.com/shaders/pushwoosh-sdk-samples.git
