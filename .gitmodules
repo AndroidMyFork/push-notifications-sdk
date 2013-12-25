@@ -1,3 +1,6 @@
 [submodule "SDK/iPhone"]
 	path = SDK/iPhone
 	url = https://github.com/shaders/pushwoosh-ios-sdk.git
+[submodule "SDK/Android"]
+	path = SDK/Android
+	url = https://github.com/shaders/pushwoosh-android-sdk.git
