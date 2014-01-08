@@ -1,12 +1,21 @@
-push-notifications-sdk
-======================
+Pushwoosh Push Notifications SDK
+================================
 
 Push notifications SDK
 
-SDK's are now separate subprojects on github. To clone them properly please use --recursive options:
+SDK's are now separate subprojects on github. To clone them properly please use *--recursive* option:  
+'git clone https://github.com/shaders/push-notifications-sdk.git --recursive'
 
-git clone https://github.com/shaders/push-notifications-sdk.git --recursive
+Or run the following command after clone:  
+'git submodule update --init'
 
-Or run the following command after clone:
+###Contents
 
-git submodule update --init
+####SDK folder
+Pushwoosh push notifications SDK for various platforms
+
+####SDK Sample Projects
+Ready-to-build sample projects for various platforms with Pushwoosh SDK integrated
+
+Pushwoosh
+http://www.pushwoosh.com
